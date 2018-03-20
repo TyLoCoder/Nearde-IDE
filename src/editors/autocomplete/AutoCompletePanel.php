@@ -61,8 +61,8 @@ class AutoCompletePanel
                     $this->down();
                     break;
                 case 'Enter':
-                    $e->consume();
                     $this->enter();
+                    $e->consume();
                     break;
                 case 'Left':
                 case 'Right':
@@ -137,17 +137,26 @@ class AutoCompletePanel
     private function enter()
     {
         if ($this->line)
-        UXApplication::runLater(function () {
+        UXApplication::runLater(function () use () {
             $this->hide();
             $item = $this->listView->selectedItems[0];
             if ($item == null) return;
             
-            $c_p = $this->textArea->caretPosition;
-            $l_p = str::length($this->line);
+            $txt = [];
+            $c_line = 0;
+            $line = $this->textArea->caretPosition;
             
-            $p = $c_p - $l_p + 4;
-            $this->textArea->deleteText($p, $c_p);
-            $this->textArea->insertToCaret($item);
+            foreach (explode("\n", $this->textArea->text) as $text)
+            {
+                $c_line++;
+                if ($this->textArea->caretLine == $c_line) {
+                    $text = str_replace($this->line, $item, $text);
+                }
+                $txt[] = $text;
+            }
+            
+            $this->textArea->text = str::join($txt, "\n");
+            $this->textArea->caretPosition = $line;
             $this->line = null;
         });
     }
