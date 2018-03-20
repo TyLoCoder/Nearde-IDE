@@ -1,6 +1,8 @@
 <?php
 namespace editors\autocomplete;
 
+use script\FileChooserScript;
+use php\util\Regex;
 use php\lib\arr;
 use php\lib\str;
 use php\framework\Logger;
@@ -29,6 +31,8 @@ class AutoCompletePanel
     
     private $line;
     
+    private $items;
+    
     public function __construct(UXAbstractCodeArea $textArea)
     {
         $this->textArea = $textArea;
@@ -49,19 +53,16 @@ class AutoCompletePanel
         });
         
         $this->textArea->on('keyDown', function (UXKeyEvent $e) {
-            Logger::info("AutoComplete key : " . $e->codeName);
-            $this->update();
             switch ($e->codeName) {
                 case 'Up':
-                    $e->consume();
+                    $this->up();
                     break;
                 case 'Down':
-                    $e->consume();
+                    $this->down();
                     break;
                 case 'Enter':
                     $e->consume();
                     $this->enter();
-                    $this->update();
                     break;
                 case 'Left':
                 case 'Right':
@@ -75,8 +76,11 @@ class AutoCompletePanel
                     $this->line = null;
                     break;
                 default:
-                    $this->line .= $e->codeName;
-                    if ($this->line) Logger::info("AutoComplete curent line : " . $this->line);
+                    if (str::length($e->codeName) == 1)
+                    {
+                        $this->line .= strtolower($e->codeName);
+                        $this->update();
+                    }
                     break;
             }
         });
@@ -93,15 +97,22 @@ class AutoCompletePanel
         list($x, $y) = [$caretBounds['x'], $caretBounds['y']];
         $x += $caretBounds['width'];
         $y += $caretBounds['height'];
-        $this->window->show($this->textArea->form, $x + 5, $y);
+        $this->window->show($this->textArea->form, $x, $y);
     }
     
     public function update()
     {
         $this->hide();
-        $arr = $this->listView->items->toArray();
+        if (!$this->line) return;
+        $arr = $this->items;
+        $arr = array_map(function ($val) {
+            if (Regex::match($this->line, $val) || $this->line == $val) {
+                return $val;
+            }
+        }, $arr);
+        $arr = array_filter($arr);
+        if (!$arr) return;
         $this->listView->items->clear();
-   
         $this->listView->items->addAll($arr);
         $this->show();
     }
@@ -120,18 +131,46 @@ class AutoCompletePanel
     public function add(string $i)
     {
         $this->listView->items->add($i);
+        $this->items[] = $i;
     }
     
     private function enter()
     {
+        if ($this->line)
         UXApplication::runLater(function () {
             $this->hide();
-            
             $item = $this->listView->selectedItems[0];
             if ($item == null) return;
-            var_dump($item);
             
-            uiLater([$this, 'show']);
+            $c_p = $this->textArea->caretPosition;
+            $l_p = str::length($this->line);
+            
+            $p = $c_p - $l_p + 4;
+            $this->textArea->deleteText($p, $c_p);
+            $this->textArea->insertToCaret($item);
+            $this->line = null;
         });
+    }
+    
+    private function up()
+    {
+        UXApplication::runLater(function () {
+            $this->listView->selectedIndex -= 1;
+            if ($this->listView->selectedIndex == -1) {
+                $this->listView->selectedIndex = $this->listView->items->count - 1;
+            }
+        });
+        return true;
+    }
+    
+    private function down()
+    {
+        UXApplication::runLater(function () {
+            $this->listView->selectedIndex += 1;
+            if ($this->listView->selectedIndex == -1) {
+                $this->listView->selectedIndex = 0;
+            }
+        });
+        return true;
     }
 }
