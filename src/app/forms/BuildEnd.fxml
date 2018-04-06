@@ -9,7 +9,7 @@
     <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/done32.png" visible="1"/>
     <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="72" layoutY="26" prefHeight="17" prefWidth="304" styleClass="label " text="Сборка завершена." textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </LabelEx>
     <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
@@ -17,25 +17,25 @@
     <Data cursor="DEFAULT" enabled="1" id="data-separator" visible="1"/>
     <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="false" id="edit" layoutX="16" layoutY="80" prefColumnCount="12" prefHeight="32" prefWidth="464" promptText="" styleClass="text-input text-field " text="">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </TextField>
     <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
     <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="button" layoutX="376" layoutY="128" prefHeight="32" prefWidth="104" styleClass="button " text="Закрыть" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </Button>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/close16.png" id="data-button" visible="1"/>
     <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="16" layoutY="128" prefHeight="32" prefWidth="112" styleClass="button " text="Запустить" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </Button>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/run16.png" id="data-buttonAlt" visible="1"/>
     <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="button3" layoutX="136" layoutY="128" prefHeight="32" prefWidth="136" styleClass="button " text="Открыть папку" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </Button>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/open16.png" id="data-button3" visible="1"/>

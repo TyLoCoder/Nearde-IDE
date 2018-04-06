@@ -4,7 +4,7 @@
     <Panel AnchorPane.bottomAnchor="96" AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="72" backgroundColor="#ffffff00" borderColor="#1a1a1a" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel" layoutX="16" layoutY="72" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="344" prefWidth="560" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
       <children/>
       <titleFont>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </titleFont>
     </Panel>
     <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
@@ -16,13 +16,13 @@
     <Data cursor="DEFAULT" enabled="1" id="data-image" image=".data/img/wait32.png" visible="1"/>
     <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="72" layoutY="24" prefHeight="17" prefWidth="200" styleClass="label font-bold " text="Сборка проекта" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </LabelEx>
     <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
     <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="72" layoutY="40" prefHeight="17" prefWidth="216" styleClass="label " text="Пожалуйста подождите ..." textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </LabelEx>
     <Data cursor="DEFAULT" enabled="1" id="data-labelAlt" visible="1"/>
@@ -30,7 +30,7 @@
     <Data cursor="DEFAULT" enabled="1" id="data-progressBar" visible="1"/>
     <CheckBox AnchorPane.bottomAnchor="16" alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="checkbox" layoutX="16" layoutY="472" prefHeight="24" prefWidth="304" selected="true" styleClass="check-box " text="Закрыть после сборки." textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </CheckBox>
     <Data cursor="DEFAULT" enabled="1" id="data-checkbox" visible="1"/>

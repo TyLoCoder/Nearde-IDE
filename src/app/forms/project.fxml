@@ -8,19 +8,19 @@
       <children>
         <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="12" layoutY="8" prefHeight="32" prefWidth="32" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
           <font>
-            <Font name="Source Sans Pro Regular" size="12"/>
+            <Font name="System Regular" size="12"/>
           </font>
         </Button>
         <Rectangle arcHeight="0" arcWidth="0" fill="#4d4d4d" focusTraversable="false" height="40" id="rectAlt" layoutX="48" layoutY="4" stroke="#334db3" strokeType="INSIDE" strokeWidth="0" styleClass="" width="1"/>
         <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="53" layoutY="8" prefHeight="32" prefWidth="32" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
           <font>
-            <Font name="Source Sans Pro Regular" size="12"/>
+            <Font name="System Regular" size="12"/>
           </font>
         </Button>
         <Rectangle arcHeight="0" arcWidth="0" fill="#4d4d4d" focusTraversable="false" height="40" id="rect" layoutX="89" layoutY="4" stroke="#334db3" strokeType="INSIDE" strokeWidth="0" styleClass="" width="1"/>
         <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="8.8780487804878" id="button" layoutX="94" layoutY="8" prefHeight="32" prefWidth="88" styleClass="button " text="Запуск" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
           <font>
-            <Font name="Source Sans Pro Regular" size="12"/>
+            <Font name="System Regular" size="12"/>
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="1" graphic=".data/img/run16.png" id="data-button" visible="1"/>
@@ -28,7 +28,7 @@
         <Data cursor="DEFAULT" enabled="1" graphic=".data/img/save16.png" id="data-button3" tooltipText="Сахранить (Ctrl + s)" visible="1"/>
         <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="186" layoutY="8" prefHeight="32" prefWidth="32" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
           <font>
-            <Font name="Source Sans Pro Regular" size="12"/>
+            <Font name="System Regular" size="12"/>
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="" graphic=".data/img/square16.png" id="data-buttonAlt" visible="1"/>
@@ -36,7 +36,7 @@
         <Data cursor="DEFAULT" enabled="1" id="data-rectAlt" visible="1"/>
         <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button5" layoutX="222" layoutY="8" prefHeight="32" prefWidth="32" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
           <font>
-            <Font name="Source Sans Pro Regular" size="12"/>
+            <Font name="System Regular" size="12"/>
           </font>
         </Button>
         <Data cursor="DEFAULT" enabled="1" graphic=".data/img/boxGo16.png" id="data-button5" visible="1"/>
@@ -46,7 +46,7 @@
     <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="48" backgroundColor="#ffffff00" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="0" focusTraversable="false" id="panel" layoutX="0" layoutY="48" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="616" prefWidth="920" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
       <children/>
       <titleFont>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </titleFont>
     </Panel>
     <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>

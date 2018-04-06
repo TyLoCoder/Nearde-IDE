@@ -1,6 +1,7 @@
 <?php
 namespace utils;
 
+use utils\Project;
 use php\framework\Logger;
 use Types\ProjectType;
 use Types\RunType;
@@ -12,9 +13,9 @@ abstract class AbstractPlatform
     private $runType;
     private $projectType;
     
-    public function __construct()
+    public function __construct(Project $project = null)
     {
-        $this->onRegister();
+        $this->onRegister($project);
     }
     
     public function registerBuildType(BuildType $type)
@@ -51,7 +52,7 @@ abstract class AbstractPlatform
         return $this->buildTypes;
     }
     
-    abstract function onRegister();
+    abstract function onRegister($project = null);
     
     public function getRunType()
     {

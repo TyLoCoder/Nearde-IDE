@@ -17,11 +17,19 @@ class JphpConsoleRunType extends RunType
 {
     public function onRun(BuildLog $log, \utils\Project $project, $call = null)
     {
-        $classPaths = arr::toList([ 'src', 'src_generated' ], $this->getJars());
+        foreach ($project->getBundles() as $jar)
+        {
+            foreach ($jar->getJarDependances() as $file)
+            {
+                $jars[] = fs::abs("./lib/" . $file . ".jar");
+            }
+        }
+        
+        $jars = str::join($jars, File::PATH_SEPARATOR);
+        
+        $classPaths = arr::toList([ 'src', 'src_generated' ], $jars);
         $args = [
-            'java',
-            '-cp',
-            str::join($classPaths, File::PATH_SEPARATOR),
+            'java', '-cp', str::join($classPaths, File::PATH_SEPARATOR),
             '-XX:+UseG1GC', '-Xms128M', '-Xmx512m', '-Dfile.encoding=UTF-8', '-Djphp.trace=true',
             'org.develnext.jphp.ext.javafx.FXLauncher'
         ];

@@ -7,27 +7,27 @@
       </items>
     </ListViewEx>
     <Data cursor="DEFAULT" enabled="1" id="data-Projectslist" visible="1"/>
-    <LabelEx AnchorPane.bottomAnchor="8" AnchorPane.rightAnchor="10" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="536" layoutY="392" prefHeight="16" prefWidth="94" styleClass="label " text="pre-RC 2" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+    <LabelEx AnchorPane.bottomAnchor="8" AnchorPane.rightAnchor="10" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="536" layoutY="391" prefHeight="16" prefWidth="94" styleClass="label " text="pre-RC 2" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </LabelEx>
     <Data cursor="DEFAULT" enabled="1" id="data-labelAlt" visible="1"/>
     <FlatButton AnchorPane.leftAnchor="304" AnchorPane.rightAnchor="16" alignment="CENTER" color="#33333300" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000027" id="button" layoutX="304" layoutY="104" prefHeight="32" prefWidth="320" styleClass="x-flat-button " text="Создать проект" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/createNewProject.png" id="data-button" visible="1"/>
     <FlatButton AnchorPane.leftAnchor="304" AnchorPane.rightAnchor="16" alignment="CENTER" color="#33333300" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000027" id="buttonAlt" layoutX="304" layoutY="144" prefHeight="32" prefWidth="320" styleClass="x-flat-button " text="Открыть проект" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/openProject.png" id="data-buttonAlt" visible="1"/>
     <FlatButton AnchorPane.leftAnchor="304" AnchorPane.rightAnchor="16" alignment="CENTER" color="#33333300" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000027" id="button3" layoutX="304" layoutY="184" opacity="0.6" prefHeight="32" prefWidth="320" styleClass="x-flat-button " text="Импорт " textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="" graphic=".data/img/importProject.png" id="data-button3" visible="1"/>

@@ -9,37 +9,37 @@
     <Data cursor="DEFAULT" enabled="1" id="data-projectsType" visible="1"/>
     <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="name" layoutX="16" layoutY="88" prefColumnCount="12" prefHeight="32" prefWidth="592" promptText="Имя проекта" styleClass="text-input text-field " text="">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </TextField>
     <Data cursor="DEFAULT" enabled="1" id="data-name" visible="1"/>
     <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="dir" layoutX="16" layoutY="400" prefColumnCount="12" prefHeight="32" prefWidth="552" promptText="Папка с проектоми" styleClass="text-input text-field " text="">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </TextField>
     <Data cursor="DEFAULT" enabled="" id="data-dir" visible="1"/>
     <FlatButton AnchorPane.rightAnchor="128" alignment="CENTER" color="#6680e600" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000033" id="button" layoutX="400" layoutY="448" prefHeight="32" prefWidth="96" styleClass="x-flat-button " text="Отмена" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="1" id="data-button" visible="1"/>
     <FlatButton AnchorPane.rightAnchor="16" alignment="CENTER" color="#6680e600" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000033" id="createButton" layoutX="504" layoutY="448" prefHeight="32" prefWidth="104" styleClass="x-flat-button " text="Создать" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="1" id="data-createButton" visible="1"/>
     <FlatButton alignment="CENTER" color="#6680e600" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" hoverColor="#00000033" id="dirButton" layoutX="576" layoutY="400" prefHeight="32" prefWidth="32" styleClass="x-flat-button " text="..." textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </FlatButton>
     <Data cursor="DEFAULT" enabled="1" id="data-dirButton" visible="1"/>
     <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="16" layoutY="32" prefHeight="16" prefWidth="528" styleClass="label " text="Создать проект." textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
-        <Font name="Source Sans Pro Regular" size="12"/>
+        <Font name="System Regular" size="12"/>
       </font>
     </LabelEx>
     <Data cursor="DEFAULT" enabled="1" graphic=".data/img/new32.png" id="data-label" visible="1"/>

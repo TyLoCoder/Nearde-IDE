@@ -1,6 +1,9 @@
 <?php
 namespace utils;
 
+use platforms\JphpGuiPlatform\JphpGuiPlatform;
+use platforms\JphpConsolePlatform\JphpConsolePlatform;
+use Types\bundleType;
 use php\framework\Logger;
 use app;
 use facade\Json;
@@ -13,24 +16,30 @@ class Project
     private $type;
     private $platform;
     private $jsonConfig;
+    private $bundles;
+    private $bundlesForJson;
     
     public function Open($path, $name)
     {
-        Logger::info("Check file");
-        var_dump($path . "/" . $name . ".nrd");
         $json = Json::fromFile($path . "/" . $name . ".nrd");
         if ($json == []) return;
-        Logger::info("Check file - OK");
-        
-        Logger::info("Check platform");
+
         $platform = MainModule::getProjects()->getPlatform($json['platform']);
         if (!$platform) return;
-        Logger::info("Check platform - OK");
-        
-        Logger::info("Check ProjectType");
+  
         $type = $platform->getProjectType();
         if (!$type) return;
-        Logger::info("Check ProjectType - OK");
+        
+        if ($platform instanceof JphpConsolePlatform || $platform instanceof JphpGuiPlatform)
+        {
+            $this->registerBundle(new JPHPCoreBundle());
+            $this->registerBundle(new JPHPRuntimeBundle());
+        }
+        
+        if ($platform instanceof JphpGuiPlatform)
+        {
+            $this->registerBundle(new JPHPJavaFXBundle());
+        }
         
         $this->dir  = $path;
         $this->name = $name;
@@ -59,7 +68,7 @@ class Project
     
     public function getJson()
     {
-        return $this->jsonConfig;
+        return Json::fromFile($this->getDir() . "/" . $this->getName() . ".nrd");
     }
     
     public function getPlatform()
@@ -77,4 +86,21 @@ class Project
             $form->addItem($type, $this);
         }
     }
+    
+    public function registerBundle(bundleType $bundle)
+    {
+        if ($this->bundles[$bundle->getName()]) return;
+        $this->bundles[$bundle->getName()] = $bundle;
+        $this->bundlesForJson[] = $bundle->getName();
+        
+        $json = $this->getJson();
+        $json['bundles'] = $this->bundlesForJson;
+        Json::toFile($this->getDir() . "/" . $this->getName() . ".nrd", $json);
+    }
+    
+    public function getBundles()
+    {
+        return $this->bundles;
+    }
+    
 }

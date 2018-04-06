@@ -1,5 +1,6 @@
 <?php
 namespace editors;
+use editors\autocomplete\AutoCompletePanel;
 use ide\autocomplete\AutoComplete;
 use ide\autocomplete\ui\AutoCompletePane;
 use editors\autocomplete\CompletePane;
@@ -55,6 +56,12 @@ class CodeEditor
         {
             $editor->text = Stream::getContents($file);
             $editor->setStylesheet(".theme/style-editor.css");
+            
+            $auto = new AutoCompletePanel($editor);
+            $auto->add("new");
+            $auto->add("if");
+            $auto->add("else");
+            $auto->add("elseif");
             
             $editor->on('keyUp', function (UXKeyEvent $e) {
                 $this->save();

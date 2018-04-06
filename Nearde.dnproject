@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="Пользователь" authorOS="Windows 7" createdAt="1518256866146" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="Nearde" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1521384283171">
+<project author="Пользователь" authorOS="Windows 7" createdAt="1518256866146" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="Nearde" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1523036692858">
   <tree>
     <expanded>
     <path src=""/>
+      <path src="/lib"/>
       <path src="/src"/>
-      <path src="/src/.data"/>
       <path src="/src/platforms"/>
       <path src="/src/platforms/JphpConsolePlatform"/>
+      <path src="/src/platforms/JphpConsolePlatform/bundles"/>
       <path src="/src/platforms/JphpConsolePlatform/project"/>
       <path src="/src/platforms/JphpConsolePlatform/run"/>
+      <path src="/src/platforms/JphpGuiPlatform"/>
+      <path src="/src/platforms/JphpGuiPlatform/bundles"/>
+      <path src="/src/Types"/>
+      <path src="/src/utils"/>
     </expanded>
   </tree>
   <openedFiles>
-  <file selected="1" src="Nearde.dnproject"/>
+  <file src="Nearde.dnproject"/>
     <file src="src/app/forms/newProject.php"/>
     <file src="src/app/modules/AppModule.php"/>
     <file src="src/app/modules/MainModule.php"/>
     <file src="src/app/forms/project.php"/>
-    <file src="src/utils/Project.php"/>
+    <file selected="1" src="src/utils/Project.php"/>
     <file src="src/app/forms/BuildType.php"/>
     <file src="src/editors/CodeEditor.php"/>
     <file src="src/app/forms/MainForm.php"/>
@@ -29,6 +34,12 @@
     <file src="src/platforms/JphpConsolePlatform/JphpConsolePlatform.php"/>
     <file src="src/platforms/JphpConsolePlatform/project/JphpConsoleProjectType.php"/>
     <file src="src/platforms/JphpConsolePlatform/run/JphpConsoleRunType.php"/>
+    <file src="src/editors/autocomplete/AutoCompletePanel.php"/>
+    <file src="src/platforms/JphpGuiPlatform/JphpGuiPlatform.php"/>
+    <file src="src/Types/bundleType.php"/>
+    <file src="src/platforms/JphpConsolePlatform/bundles/JPHPCoreBundle.php"/>
+    <file src="src/platforms/JphpConsolePlatform/bundles/JPHPRuntimeBundle.php"/>
+    <file src="src/platforms/JphpGuiPlatform/bundles/JPHPJavaFXBundle.php"/>
   </openedFiles>
   <files/>
   <behaviours>
